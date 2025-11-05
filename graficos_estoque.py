@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+
+# 1. Tendência de Estoque Diário (Gráfico de Linha)
+dias = [1, 2, 3, 4, 5, 6, 7]
+estoque = [100, 95, 110, 105, 120, 115, 130]
+
+plt.figure(figsize=(8, 4))
+plt.plot(dias, estoque, marker='o', color='blue', label='Estoque Diário')
+plt.title('Tendência de Estoque Diário - Produto A')
+plt.xlabel('Dia')
+plt.ylabel('Quantidade em Estoque')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# 2. Comparação de Produtos (Gráfico de Barras)
+produtos = ['Teclado', 'Mouse', 'Monitor', 'Webcam']
+quantidades = [50, 75, 30, 60]
+
+plt.figure(figsize=(8, 4))
+plt.bar(produtos, quantidades, color=['purple', 'green', 'orange', 'cyan'])
+plt.title('Comparação de Quantidades em Estoque por Produto')
+plt.xlabel('Produto')
+plt.ylabel('Quantidade')
+plt.show()
+
+# 3. Proporção de Categorias (Gráfico de Pizza)
+categorias = ['Eletrônicos', 'Vestuário', 'Alimentos']
+valores = [15000, 8000, 5000]
+cores = ['#1f77b4', '#ff7f0e', '#2ca02c']
+
+plt.figure(figsize=(6, 6))
+plt.pie(valores, labels=categorias, autopct='%1.1f%%', startangle=90, colors=cores)
+plt.title('Proporção do Valor Total de Estoque por Categoria')
+plt.show()
+
+# 4. Preço vs. Quantidade (Gráfico de Dispersão)
+precos = [50, 120, 300, 80, 20]
+estoque = [80, 25, 10, 70, 150]
+
+plt.figure(figsize=(8, 5))
+plt.scatter(precos, estoque, color='red', marker='x')
+plt.title('Relação entre Preço Unitário e Quantidade em Estoque')
+plt.xlabel('Preço Unitário (R$)')
+plt.ylabel('Quantidade em Estoque')
+plt.grid(True)
+plt.show()
